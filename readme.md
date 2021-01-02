@@ -50,6 +50,39 @@ OAuth 2.0 is a protocol that allows a user to grant limited access to their reso
 
 ##Security Applied Sensitive Data
 
+Define lifecycles for keys and change often.
+Authorization needs to be used. Crptography discussion.
+Only store needed data.
+Data = Cryptography (no exceptions)
+
+"when you build an application, you leverage a library that provides you with the cryptography tools to encrypt your data while it moves across the internet from your server to your client. So if a hacker catches this data midstream, it is unreadable, and without the key or passphrase, impossible to decipher."
+
+**Cryptography Libraries**
+Recommended Libraries:
+Crypto module with the nodejs library. Node.js.org/API/cryp
+Stanford Javacsript Crypto Library SJCL - easy to use and fast - hbitwiseshiftleft.github.io/sjcl/ & http://bitwiseshiftleft.github.io/sjcl/demo/
+
 ##Security Applied SSJI
+Injections to force server loops or SQL injectsions.
+Used for DDOS attacks
+
+Data validation should be used in SQL. Without it, the data could be forced to return a password. 'Type checking' needed.
+
+Prevention of server injection
+Do not use eval setTimeout setInterval or function()
+Validate use input before processing with typechcking and other mechanism
+When using JSON input use .parse() instead of eval()
+Use strict mode at the top of JS files.
+
+Rules for SQL/NoSQ:
+Prepared statements instead of dynamic queries with string concatenation
+Never provide admin right to the database with the application
+Valid use input before processing
 
 ##Security Applied Obsfuscation
+Hiding code behind algorithm & makes code unreadable;
+Scramble code with obfuscator.io; javascript2img scrambler https://javascript2img.com/; jsscrambler.com;
+
+Useful because the client side code gets hidden because the client side code is always visble. Reduces possibility of errors getting exploited.
+Unauthorized users should be not able to edit or modify the client side code.
+Scrambling reduces possible hacks.
